@@ -1,0 +1,18 @@
+/*css reset*/
+*{margin:0;padding:0;}
+.font_color{color:#C5A185;}
+.font_family{font-size:0.8rem;}
+.bg_color{background: #e8e8e8;}
+.my_header,.my_footer{
+    width:100%;
+}
+/*大屏幕下iframe的高*/
+@media (min-width:992px) {
+    .my_header{height:7rem;}
+    .my_footer{height:15rem;}
+}
+/*中小屏下iframe高*/
+@media (max-width:991px) and (min-width:576px) {
+    .my_header{height:20rem;}
+    .my_footer{height:23rem;}
+}

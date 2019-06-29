@@ -1,0 +1,61 @@
+.my_header,.my_footer{
+    width:100%;
+}
+/*大屏幕下iframe的高*/
+@media (min-width:992px) {
+    .my_header{height:7rem;}
+    .my_footer{height:15rem;}
+}
+/*中小屏下iframe高*/
+@media (max-width:991px) and (min-width:576px) {
+    .my_header{height:20rem;}
+    .my_footer{height:23rem;}
+}
+/*焦点轮播图箭头样式*/
+.carousel-control-prev,
+.carousel-control-next{
+    width:4%; height:20%;
+    background-color:rgba(0,0,0,0.3);
+    border-radius:0.25rem;
+    top:40%;
+}
+/*轮播指示器样式*/
+.carousel-indicators li{
+    width:0.75rem;height:0.75rem;
+    border-radius:50%;
+    background: #fff;
+    margin-right:6px;
+    margin-left:6px;
+}
+.carousel-indicators .active {
+    background-color: #0aa1ed;
+}
+/*商品展示区样式*/
+.product>img{
+    position:relative;
+}
+.product>img:hover{
+    cursor:pointer;
+}
+.product>.details{
+    position:absolute;
+    width:75%;
+    left:12%;bottom:-10px;
+    font-size:16px;
+}
+.product:hover{
+    cursor:pointer;
+    transition:1s;
+    transform:scale(1.1);
+}
+/*新闻资讯*/
+.font_xw_color{color: #6b8ca0;}
+.bg_color{background: #F8F4F1;}
+.xwzx_img_height{
+    height:260px;
+}
+.xwzx_img_height:hover{
+    cursor:pointer;
+    transition:1s;
+    transform:scale(1.1);
+}
