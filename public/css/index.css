@@ -49,7 +49,7 @@
     transform:scale(1.1);
 }
 /*新闻资讯*/
-.font_xw_color{color: #6b8ca0;}
+
 .bg_color{background: #F8F4F1;}
 .xwzx_img_height{
     height:260px;
@@ -80,7 +80,7 @@
 }
 .form-control{
     width:260px;height:60px;
-    background:#fbfbfb;t
+    background:#fbfbfb;
     padding:5px;
 }
 .submit_bg_color{

@@ -6,6 +6,7 @@
 .my_header,.my_footer{
     width:100%;
 }
+.font_xw_color{color: #6b8ca0;}
 /*大屏幕下iframe的高*/
 @media (min-width:992px) {
     .my_header{height:7rem;}
