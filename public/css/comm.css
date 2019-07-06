@@ -7,6 +7,10 @@
     width:100%;
 }
 .font_xw_color{color: #6b8ca0;}
+.submit_bg_color{
+    background: #e7d2b7 !important;
+}
+
 /*大屏幕下iframe的高*/
 @media (min-width:992px) {
     .my_header{height:7rem;}
