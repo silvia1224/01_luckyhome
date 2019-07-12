@@ -11,6 +11,7 @@
     <script src="../js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/comm.css"/>
     <link rel="stylesheet" href="css/contact_us.css"/>
+    <script src="js/contact_us.js"></script>
 </head>
 <body>
 <header>
@@ -75,9 +76,10 @@
             </table>
         </div>
         <div class="w-50 m-auto">
-            <div class="text-center">
+            <div class="text-center pt-3">
                 <span>验证码:</span>
-                <input class="btn btn-light w-25 mt-3" type="text"/><img class="d-inline w-25 mt-3 ml-1" src="img/index/do.jpg" alt=""/>
+                <input class="btn btn-light w-25 mb-4 " type="text"/>
+                <canvas class="" width="120" height="34" id="c1"></canvas>
             </div>
             <input class="btn btn-info w-50 my-3 submit_bg_color border-0" type="submit" value="提交"/>
         </div>
@@ -87,16 +89,16 @@
         <div class="row">
             <div class="col-6">
                 <div>
-                    <div class="d-inline-block" id="bg_img1"></div>
-                    <span class="d-inline-block py-2">Info.home@111.com</span>
+                    <img src="img/index/email.png" alt=""/>
+                    <span>Info.home@111.com</span>
                 </div>
-                <div>
-                    <div class="d-inline-block" id="bg_img2"></div>
-                    <span class="d-inline-block py-2"> 北京市海淀区中关村科贸大厦</span>
+                <div class="ml-5">
+                    <img src="img/index/location.png" alt=""/>
+                    <span>北京市海淀区中关村科贸大厦</span>
                 </div>
-                <div>
-                    <div class="d-inline-block" id="bg_img3"></div>
-                    <span class="d-inline-block py-2">+86（3）000 1234 4567</span>
+                <div class="ml-2">
+                    <img src="img/index/phone.png" alt=""/>
+                    <span>+86（3）000 1234 4567</span>
                 </div>
             </div>
             <div class="col-6">
@@ -107,8 +109,10 @@
         </div>
     </div>
 </div>
+
 <footer>
     <iframe class="my_footer" src="footer.html" frameborder="0" scrolling="no"></iframe>
 </footer>
+<script src="js/contact_us.js"></script>
 </body>
 </html>

@@ -1,29 +1,125 @@
-.reg{
-    width:100%;
-    height:500px;
-    background:url(../img/register/banner2.jpg) no-repeat;
-    margin:0 auto;
+body, html {
+    margin: 0;
+    padding: 0;
+    font: 12px "ËÎÌå";
+    color: #666
 }
-.reg div.black{
-    width:360px;
-    height:420px;
-    background:rgba(0,0,0,.3);
-    margin:50px 0 50px 120px;
+
+.py-container {
+    width: 1200px;
+    margin: 0 auto
 }
-.reg div.black table{
-    width:100%;
+
+/*¶¥²¿logoÑùÊ½*/
+.logoArea{
+    height:78px;
+    border-bottom:2px solid #C5A185;
 }
-.reg h4{
-    color:#fff;
-    margin:0;
+
+.logo{
+    background: url(../img/header/logo.png) no-repeat;
+    width:175px;
+    height:62px;
+    margin: 13px auto;
+    position:absolute;
 }
-.reg a{
-    color:#fff;
-    text-decoration:none;
-    font-size:16px;
+
+/*×¢²á*/
+.registerArea {
+    margin: 15px 0;
+    border: 1px solid #dfdfdf;
+    font-family: "Î¢ÈíÑÅºÚ"
 }
-input.reg{
-    width:100%;
-    height:40px;
-    margin-top:20px;
+
+.registerArea h3 {
+    background: #ececec;
+    margin: 0;
+    padding: 6px 15px;
+    color: #333;
+    border-bottom: 1px solid #dfdfdf;
+    font-weight: 700;
+    padding-top:10px ;
+    padding-bottom:10px ;
+}
+
+.registerArea .info{
+    width:600px;
+    margin:40px  auto;
+}
+
+h3 .go {
+    font-size: 14px;
+    float: right
+}
+
+.control-label {
+    font-size: 14px
+}
+
+.sui-form {
+    margin: 0
+}
+
+.sui-form .control-group label {
+    display: inline;
+    zoom: 1;
+    float: left
+}
+
+.sui-form input[type=text].input-xfat.input-xlarge, .sui-form input[type=password].input-xfat.input-xlarge
+{
+    width: 250px;
+    border-radius: 0;
+    border: 1px solid #999;
+    height: 36px
+}
+
+.btn-reg {
+    width: 250px
+}
+
+.controls .btn-reg{
+    margin-right:0;
+}
+.reg {
+    width: 221px
+}
+
+.zhuce {
+    *width: 221px;
+    float: right
+}
+
+.btn-danger {
+    background-color: #c81623;
+    padding: 6px;
+    border-radius: 0;
+    font-size: 16px;
+    font-family: Î¢ÈíÑÅºÚ;
+    word-spacing: 4px
+}
+
+.control-group.pl-7{
+    padding-left:5rem;
+}
+.control-group.pl-8{
+    padding-left:6.5rem;
+}
+.copyright {
+    text-align: center;
+    line-height: 24px
+}
+
+.copyright ul li {
+    list-style-type: none;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    border-right: 1px solid #e4e4e4;
+    padding: 0 20px;
+    margin: 15px 0
+}
+
+.copyright ul li:last-child {
+    border-right: 0
 }

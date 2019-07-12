@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title></title>
+    <title>luckyhome注册页面</title>
     <!--引入4个文件，必须注意导入顺序不能改变-->
     <link rel="stylesheet" href="../css/bootstrap.css"/>
     <script src="../js/jquery.min.js"></script>
@@ -13,73 +13,65 @@
     <link rel="stylesheet" href="css/register.css"/>
 </head>
 <body>
-<header>
-    <iframe class="my_header" src="header.html" frameborder="0" scrolling="no"></iframe>
-</header>
-<div class="container text-center">
-    <div class="reg">
-        <table></table>
-        <div class="black">
-            <table >
-                <tr>
-                    <td>
-                        <h4 class="text-right my-2 ">新用户注册</h4>
-                    </td>
-                    <td colspan="2">
-                        <a href="login.html" class="my-2">直接登陆</a>
-                    </td>
+<div class="register py-container">
+     <!--顶部logo-->
+    <div class="logoArea font-weight-bold">
+        <a href="#" class="logo"></a>
+    </div>
+    <!--注册-->
+    <div class="registerArea" id="registerApp">
+        <h3 class="pl-4">新用户注册 <span class="go">我有账号，去 <a href="login.html" target="_blank">登陆</a></span> </h3>
+        <div class="info">
+            <form class="sui-form form-horizontal">
+                <div class="control-group mb-4">
+                    <label class="control-label text-dark mx-4 py-2">用户名:</label>
+                    <div class="controls">
+                        <input type="text" placeholder="请输入您的用户名" class="input-xfat input-xlarge px-2" />
+                    </div>
+                </div>
+                <div class="control-group mb-4">
+                    <label class="control-label text-dark mr-3 py-2">登录密码：</label>
+                    <div class="controls">
+                        <input type="password" placeholder="设置登陆密码" class="input-xfat input-xlarge px-2" />
+                    </div>
+                </div>
+                <div class="control-group mb-4">
+                    <label class="control-label text-dark mr-3 py-2">确认密码：</label>
+                    <div class="controls">
+                        <input type="password" placeholder="再次确认密码" class="input-xfat input-xlarge px-2" />
+                    </div>
+                </div>
+                <div class="control-group mb-4">
+                    <label class="control-label text-dark mx-4 py-2">手机号:</label>
+                    <div class="controls">
+                        <input type="text" placeholder="请输入您的手机号" class="input-xfat input-xlarge px-2" />
+                    </div>
+                </div>
+                <div class="control-group mb-4">
+                    <label class="control-label text-dark mx-4">验证码:</label>
+                    <div class="controls">
+                        <input type="text" placeholder="短信验证码" class="input-xfat input-xlarge px-2 mr-2" style="width:120px;"/>
+                        <button class="btn border bg-white text-muted btn-lg font_family py-2 ">获取短信验证码</button>
+                    </div>
+                </div>
+                <div class="control-group mb-4 pl-7">
+                    <label class="control-label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <div class="controls ">
+                        <input name="m1" type="checkbox" value="2" checked=""><span>同意协议并注册《<a href="#">luckyhome用户协议</a>》</span>
+                    </div>
+                </div>
+                <div class="control-group mb-4 pl-7 pl-8">
+                    <label class="control-label "></label>
+                    <div class="controls btn-reg ">
+                        <a class="sui-btn btn-block btn-xlarge btn-danger text-center" href="javascript:void(0)" target="_blank"
+                           @click.stop="submit"
+                                >完成注册</a>
+                    </div>
+                </div>
+            </form>
 
-                </tr>
-                <tr >
-                    <td class="text-white text-right">用户名：</td>
-                    <td class="text-right">
-                        <input class="my-2 py-2 w-100" placeholder="请输入用户名" name="uname" type="text"/>
-                    </td>
-                    <td class="d-none">用户名不能为空</td>
-                </tr>
-                <tr>
-                    <td class="text-white text-right">密码：</td>
-                    <td class="text-right">
-                        <input class="my-2 py-2 w-100" placeholder="请输入密码" name="upwd" type="password"/>
-                    </td>
-                    <td class="d-none">密码不能为空</td>
-                </tr>
-                <tr>
-                    <td class="text-white text-right">确认密码：</td>
-                    <td class="text-right">
-                        <input class="my-2 py-2 w-100" placeholder="请确认密码" name="upwd" type="password"/>
-                    </td>
-                    <td class="d-none">确认密码不能为空</td>
-                </tr>
-                <tr>
-                    <td class="text-white text-right">邮箱：</td>
-                    <td class="text-right">
-                        <input class="my-2 py-2 w-100" placeholder="请输入邮箱地址" name="email" type="text"/>
-                    </td>
-                    <td class="d-none">邮箱不能为空</td>
-                </tr>
-                <tr>
-                    <td class="text-white text-right">手机号：</td>
-                    <td class="text-right">
-                        <input class="my-2 py-2 w-100" placeholder="请输入手机号码" name="phone" type="text"/>
-                    </td>
-                    <td class="d-none">手机号不能为空</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td class="text-right">
-                        <input type="button" value="提交注册信息" class="reg my-2 w-100 text-white">
-                    </td>
-                    <td></td>
-                </tr>
-            </table>
         </div>
     </div>
-
-
 </div>
-<footer>
-    <iframe class="my_footer" src="footer.html" frameborder="0" scrolling="no"></iframe>
-</footer>
 </body>
 </html>

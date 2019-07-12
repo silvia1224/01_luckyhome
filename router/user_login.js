@@ -1,3 +1,7 @@
+const express=require("express");
+var pool=require("../pool.js");
+let router=express.Router();
+
 //get请求登录接口，实际应用post
 router.get("/user_login",(req,res)=>{
     //获取请求中的数据
@@ -13,8 +17,8 @@ router.get("/user_login",(req,res)=>{
        return;
    }
    //使用连接池获取访问数据
-   pool.query("SELECT * FROM luckyhoem_user WHERE uname=? AND upwd=?",[$uname,$upwd],(err,result)=>{
-       console.log(result);
+   pool.query("SELECT * FROM luckyhome_user WHERE uname=? AND upwd=?",[$uname,$upwd],(err,result)=>{
+       //console.log(result);
        if(result.length>0){
            res.send("登陆成功");
        }else{
@@ -22,3 +26,4 @@ router.get("/user_login",(req,res)=>{
        }
    });
 });
+module.exports = router;
