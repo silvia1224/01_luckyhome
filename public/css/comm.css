@@ -14,6 +14,10 @@
     width:100%;
 }
 
+.py-container {
+    width: 1200px;
+    margin: 0 auto
+}
 .font_xw_color{color: #6b8ca0;}
 
 .submit_bg_color{
@@ -42,7 +46,11 @@ h3, p {
     margin: 5px 0
 }
 
-
+.sui-carousel {
+    position: relative;
+    margin-bottom: 18px;
+    line-height: 1
+}
 
 
 /*大屏幕下iframe的高*/

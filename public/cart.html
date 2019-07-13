@@ -9,7 +9,7 @@
     <script src="../js/jquery.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/comm.css"/>
     <link rel="stylesheet" href="css/cart.css"/>
 </head>
 <body>
@@ -20,39 +20,40 @@
     <div class="cart py-container">
         <!--logoArea-->
         <div class="logoArea">
-            <a href="index.html"><div class="fl logo"><span class="title">购物车</span></div></a>
+            <a href="index.html"><div class="float-left logo"><span class="title">购物车</span></div></a>
         </div>
         <!--All goods-->
         <div class="allgoods">
-            <h4>全部商品<span>11</span></h4>
+            <h4 class="py-3">全部商品</h4>
             <div class="cart-main">
-                <div class="yui3-g cart-th">
-                    <div class="yui3-u-1-4"><input ref="selectAllTop" type="checkbox" @click="selectAll()"/> 全部</div>
+                <div class="yui3-g cart-th d-flex justify-content-between">
+                    <div class="yui3-u-1-4"><input ref="selectAllTop" type="checkbox" /> 全部</div>
                     <div class="yui3-u-1-4">商品</div>
                     <div class="yui3-u-1-8">单价（元）</div>
                     <div class="yui3-u-1-8">数量</div>
                     <div class="yui3-u-1-8">小计（元）</div>
                     <div class="yui3-u-1-8">操作</div>
+                    <div class="yui3-u-1-8">  </div>
                 </div>
             </div>
             <div class="cart-tool">
                 <div class="select-all">
-                    <input type="checkbox" @click="selectAll" ref="selectAllBottom"/>
+                    <input type="checkbox" ref="selectAllBottom"/>
                     <span>全选</span>
                 </div>
                 <div class="option">
-                    <a href="#none">删除选中的商品</a>
-                    <a href="#none">移到我的关注</a>
-                    <a href="#none">清除下柜商品</a>
+                    <a href="#">删除选中的商品</a>
+                    <a href="#">移到我的关注</a>
+                    <a href="#">清除下柜商品</a>
                 </div>
                 <div class="toolbar">
-                    <div class="chosed">已选择<span>{{totalNum}}</span>件商品</div>
+                    <!--<div class="chosed">已选择<span>{{totalNum}}</span>件商品</div>-->
                     <div class="sumprice">
-                        <span><em>总价（不含运费） ：</em><i class="summoney">{{totalPrice}}</i></span>
-                        <span><em>已节省：</em><i>-¥20.00</i></span>
+                        <!--<span><em>总价（不含运费） ：</em><i class="summoney">{{totalPrice}}</i></span>-->
+                        <!--<span><em>已节省：</em><i>-¥20.00</i></span>-->
                     </div>
                     <div class="sumbtn">
-                        <a class="sum-btn"  @click.prevent="toOrderInfo"  target="_blank">结算</a>
+                        <a class="sum-btn"  target="_blank">结算</a>
                     </div>
                 </div>
             </div>
@@ -60,27 +61,27 @@
             <div class="deled">
                 <span>已删除商品，您可以重新购买或加关注：</span>
                 <div class="cart-list del">
-                    <ul class="goods-list yui3-g">
-                        <li class="yui3-u-1-2">
+                    <ul class="goods-list yui3-g p-0 py-2">
+                        <li class="yui3-u-1-2 ">
                             <div class="good-item">
-                                <div class="item-msg">Apple Macbook Air 13.3英寸笔记本电脑 银色（Corei5）处理器/8GB内存</div>
+                                <div class="item-msg mr-5">彼爱北欧实木餐桌椅组合现代简约小户型多功能智能电磁炉饭桌家具</div>
                             </div>
                         </li>
-                        <li class="yui3-u-1-6"><span class="price">8848.00</span></li>
-                        <li class="yui3-u-1-6">
-                            <span class="number">1</span>
+                        <li class="yui3-u-1-6 mx-5"><span class="price">3999.00</span></li>
+                        <li class="yui3-u-1-6 mx-5">
+                            <span class="number mx-5">1</span>
                         </li>
-                        <li class="yui3-u-1-8">
-                            <a href="#none">重新购买</a>
-                            <a href="#none">移到我的关注</a>
+                        <li class="yui3-u-1-8 text-right">
+                            <a href="#" class="font_color mr-5">重新购买</a>
+                            <a href="#" class="font_color mr-5">移到我的关注</a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="liked">
-                <ul class="sui-nav nav-tabs">
-                    <li class="active">
-                        <a href="#index" data-toggle="tab">猜你喜欢</a>
+                <ul class="sui-nav nav-tabs p-0">
+                    <li class="active border-0">
+                        <a href="#index" data-toggle="tab" class="text-white bg-danger px-4 py-3">猜你喜欢</a>
                     </li>
                     <li>
                         <a href="#profile" data-toggle="tab">特惠换购</a>
@@ -92,53 +93,53 @@
                         <div id="myCarousel" data-ride="carousel" data-interval="4000" class="sui-carousel slide">
                             <div class="carousel-inner">
                                 <div class="active item">
-                                    <ul>
-                                        <li>
-                                            <img class="w-50" src="img/product/product1.jpg"/>
+                                    <ul class="d-flex">
+                                        <li class="text-center">
+                                            <img class="w-75" src="img/product/product1.jpg"/>
                                             <div class="intro">
-                                                <i>Apple苹果iPhone 6s (A1699)</i>
+                                                <i>北欧客厅家居软装饰品</i>
                                             </div>
                                             <div class="money">
-                                                <span>$29.00</span>
+                                                <span>￥2699.00</span>
                                             </div>
                                             <div class="incar">
                                                 <a href="#" class="sui-btn btn-bordered btn-xlarge btn-default"><i
                                                         class="car"></i><span class="cartxt">加入购物车</span></a>
                                             </div>
                                         </li>
-                                        <li>
-                                            <img class="w-50" src="img/product/product2.jpg"/>
+                                        <li class="text-center">
+                                            <img class="w-75" src="img/product/product2.jpg"/>
                                             <div class="intro">
-                                                <i>Apple苹果iPhone 6s (A1699)</i>
+                                                <i>彼爱北欧实木餐桌椅组合</i>
                                             </div>
                                             <div class="money">
-                                                <span>$29.00</span>
+                                                <span>￥3999.00</span>
                                             </div>
                                             <div class="incar">
                                                 <a href="#" class="sui-btn btn-bordered btn-xlarge btn-default"><i
                                                         class="car"></i><span class="cartxt">加入购物车</span></a>
                                             </div>
                                         </li>
-                                        <li>
-                                            <img class="w-50" src="img/product/product3.jpg"/>
+                                        <li class="text-center">
+                                            <img class="w-75" src="img/product/product3.jpg"/>
                                             <div class="intro">
-                                                <i>Apple苹果iPhone 6s (A1699)</i>
+                                                <i>现代装饰挂画餐厅墙面壁画</i>
                                             </div>
                                             <div class="money">
-                                                <span>$29.00</span>
+                                                <span>￥3299.00</span>
                                             </div>
                                             <div class="incar">
                                                 <a href="#" class="sui-btn btn-bordered btn-xlarge btn-default"><i
                                                         class="car"></i><span class="cartxt">加入购物车</span></a>
                                             </div>
                                         </li>
-                                        <li>
-                                            <img class="w-50" src="img/product/product4.jpg"/>
+                                        <li class="text-center">
+                                            <img class="w-75" src="img/product/product4.jpg"/>
                                             <div class="intro">
-                                                <i>Apple苹果iPhone 6s (A1699)</i>
+                                                <i>落地喷泉风水轮摆件客厅</i>
                                             </div>
                                             <div class="money">
-                                                <span>$29.00</span>
+                                                <span>￥3999.00</span>
                                             </div>
                                             <div class="incar">
                                                 <a href="#" class="sui-btn btn-bordered btn-xlarge btn-default"><i
@@ -149,52 +150,52 @@
                                 </div>
                                 <div class="item">
                                     <ul>
-                                        <li>
-                                            <img class="w-50" src="img/product/product5.jpg"/>
+                                        <li class="text-center">
+                                            <img class="w-75" src="img/product/product5.jpg"/>
                                             <div class="intro">
-                                                <i>Apple苹果iPhone 6s (A1699)</i>
+                                                <i>梅花鹿纯铜鹿摆件家居装饰品</i>
                                             </div>
                                             <div class="money">
-                                                <span>$29.00</span>
+                                                <span>￥3298.00</span>
                                             </div>
                                             <div class="incar">
                                                 <a href="#" class="sui-btn btn-bordered btn-xlarge btn-default"><i
                                                         class="car"></i><span class="cartxt">加入购物车</span></a>
                                             </div>
                                         </li>
-                                        <li>
-                                            <img class="w-50" src="img/product/product6.jpg"/>
+                                        <li class="text-center">
+                                            <img class="w-75" src="img/product/product6.jpg"/>
                                             <div class="intro">
-                                                <i>Apple苹果iPhone 6s (A1699)</i>
+                                                <i>梅花鹿纯铜鹿摆件家居装饰品</i>
                                             </div>
                                             <div class="money">
-                                                <span>$29.00</span>
+                                                <span>￥3298.00</span>
                                             </div>
                                             <div class="incar">
                                                 <a href="#" class="sui-btn btn-bordered btn-xlarge btn-default"><i
                                                         class="car"></i><span class="cartxt">加入购物车</span></a>
                                             </div>
                                         </li>
-                                        <li>
-                                            <img class="w-50"src="img/product/product7.jpg"/>
+                                        <li class="text-center">
+                                            <img class="w-75"src="img/product/product7.jpg"/>
                                             <div class="intro">
-                                                <i>A pple苹果iPhone 6s (A1699)</i>
+                                                <i>陶瓷干花花瓶摆件</i>
                                             </div>
                                             <div class="money">
-                                                <span>$29.00</span>
+                                                <span>￥3299.00</span>
                                             </div>
                                             <div class="incar">
                                                 <a href="#" class="sui-btn btn-bordered btn-xlarge btn-default"><i
                                                         class="car"></i><span class="cartxt">加入购物车</span></a>
                                             </div>
                                         </li>
-                                        <li>
-                                            <img class="w-50" src="img/product/product8.jpg"/>
-                                            <div class="intro">
-                                                <i>Apple苹果iPhone 6s (A1699)</i>
+                                        <li class="text-center">
+                                            <img class="w-75" src="img/product/product8.jpg"/>
+                                            <div class="intro text-center">
+                                                <i>创意家居软装饰工艺品</i>
                                             </div>
-                                            <div class="money">
-                                                <span>$29.00</span>
+                                            <div class="money text-center">
+                                                <span>￥3399.00</span>
                                             </div>
                                             <div class="incar">
                                                 <a href="#" class="sui-btn btn-bordered btn-xlarge btn-default"><i
@@ -215,7 +216,6 @@
             </div>
         </div>
     </div>
-
 </div>
 </body>
 </html>

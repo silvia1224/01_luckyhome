@@ -18,54 +18,71 @@
   </style>
  </head>
  <body>
- <header>
-     <iframe class="my_header" src="header.html" frameborder="0" scrolling="no"></iframe>
- </header>
-    <div class="container">
-        <div class="login">
-            <table></table>
-            <div class="black">
-                <table>
-                    <tr>
-                        <td>
-                            <h4>登录luckyhome</h4>
-                        </td>
-                        <td>
-                            <a href="register.html">新用户注册</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><hr></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <input type="text" placeholder="请输入您的用户名" class="uname" name="uname">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <input type="password" placeholder="请输入您的密码" class="upwd" name="upwd">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="autoLogin">
-                            <input class="ml-1" type="checkbox">自动登录
-                        </td>
-                        <td>
-                            <a href="#">忘记密码？</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <input type="button" onclick="login()" value="登录" class="login text-white">
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <iframe class="my_footer" src="footer.html" frameborder="0" scrolling="no"></iframe>
-    </footer>
+ <div class="login-box">
+     <!--head-->
+     <div class="py-container logoArea mb-3">
+         <a href="" class="logo"></a>
+     </div>
+     <!--loginArea-->
+     <div class="loginArea" id="loginApp">
+         <div class="py-container login">
+             <div class="loginform">
+                 <ul class="sui-nav nav-tabs tab-wraped list-unstyled d-flex">
+                     <li>
+                         <a href="#index" data-toggle="tab">
+                             <h3>扫描登录</h3>
+                         </a>
+                     </li>
+                     <li class="active">
+                         <a href="#profile" data-toggle="tab">
+                             <h3>账户登录</h3>
+                         </a>
+                     </li>
+                 </ul>
+                 <div class="tab-content tab-wraped">
+                     <div id="index" class="tab-pane">
+                         <p>二维码登录</p>
+                         <img src="img/register/erweima.png"/>
+                     </div>
+                     <div id="profile" class="tab-pane  active">
+                         <span v-text="msg"></span>
+                         <form class="sui-form">
+                             <div class="input-prepend mt-4">
+                                 <span class="add-on loginname p-3 border"></span>
+                                 <input id="username" type="text" placeholder="邮箱/用户名/手机号" class="span2 input-xfat p-3 mb-2">
+                             </div>
+                             <div class="input-prepend mr-2">
+                                 <span class="add-on loginpwd p-3 border"></span>
+                                 <input id="password" type="password" placeholder="请输入密码" class="span2 input-xfat p-3 mb-2">
+                             </div>
+                             <div class="setting">
+                                 <label class="checkbox inline">
+                                     <input name="m1" type="checkbox" value="2" checked="">
+                                     自动登录
+                                 </label>
+                                 <span class="forget"><a href="#">忘记密码？</a></span>
+                             </div>
+                             <div class="logined">
+                                 <a class="sui-btn btn-block btn-xlarge btn-danger text-center" @click="login"
+                                    href="javascript:void(0)">登&nbsp;&nbsp;录</a>
+                             </div>
+                         </form>
+                         <div class="otherlogin">
+                             <div class="types">
+                                 <ul>
+                                     <li><img src="img/register/qq.png" width="35px" height="35px"/></li>
+                                     <li><img src="img/register/sina.png"/></li>
+                                     <li><img src="img/register/ali.png"/></li>
+                                     <li><img src="img/register/weixin.png"/></li>
+                                 </ul>
+                             </div>
+                             <span class="register"><a href="register.html" target="_blank">立即注册</a></span>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
  </body>
 </html>

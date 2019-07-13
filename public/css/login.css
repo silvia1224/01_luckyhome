@@ -1,46 +1,153 @@
-.login{
-    width:100%;
-    height:500px;
-    background:url(../img/register/banner2.jpg) no-repeat;
-    margin:0 auto;
+.logoArea {
+    height: 84px;
+    border-bottom:2px solid #C5A185;
 }
-.login div.black{
-    width:280px;
-    height:300px;
-    background:rgba(0,0,0,.3);
-    margin:100px 0 0 150px;
+
+.loginArea {
+    height: 487px;
+    background-color: #FFFFFF;
+
 }
-.login div.black table{
-    width:100%;
+
+.copyright {
+    text-align: center;
+    line-height: 24px
 }
-.login h4{
-    color:#fff;
-    margin:0;
+
+.logo {
+
+    background: url(../img/header/logo.png) no-repeat;
+    width: 175px;
+    height: 60px;
+    margin: 13px auto;
+    position: absolute;
 }
-.login a{
-    color:#fff;
-    text-decoration:none;
-    font-size:12px;
+
+.login {
+    background: url(../img/register/banner1.jpg);
+    height: 487px
 }
-input.uname,input.upwd{
-    width:100%;
-    height:34px;
-    border:none;
-    outline:0;
-    padding-left:15px;
-    margin-bottom:30px;
-    box-sizing:border-box;
-    background:#fff url(../img/register/yhm.png) no-repeat 97% center;
+
+.loginform {
+    width: 380px;
+    background: #fff;
+    float: left;
+    left:50px;
+    top: 45px;
+    position: relative;
+    padding: 20px
 }
-input.upwd{
-    background-image:url(../img/register/mm.png);
+
+img {
+    display: block;
+    margin: 0 auto
 }
-input.login{
-    width:100%;
-    height:36px;
-    margin-top:20px;
+
+.sui-form {
+    margin-top: 15px
 }
-td.autoLogin{
-    color:#fff;
-    font-size:12px;
+
+span.loginname {
+    background-image: url(../img/register/icons.png);
+    background-position: -10px -201px
+}
+
+.sui-form .input-prepend {
+    margin-bottom: 16px
+}
+
+.sui-nav.nav-tabs.tab-wraped>li {
+    width: 50%
+}
+
+.sui-nav.nav-tabs.tab-wraped>li.active>a {
+    padding-top: 0;
+    border-top: 1px solid #28a3ef
+}
+
+.sui-nav.nav-tabs.tab-wraped>li>a {
+    padding: 0
+}
+
+.sui-nav.nav-tabs.tab-wraped>li.active h3 {
+    color: #c8111a
+}
+
+.sui-form .input-prepend .add-on {
+    padding: 6px 5px;
+    background-color: #cfcdcd;
+    width: 25px;
+    height: 23px;
+    float: left
+}
+
+.sui-form input[type=text], .sui-form input[type=password] {
+    height: 23px
+}
+
+.sui-form input.span2 {
+    width: 284px;
+    /*float: left*/
+}
+
+.loginpwd {
+    background-image: url(../img/register/icons.png);
+    background-position: -72px -201px;
+    display: block;
+    width: 25px;
+    height: 23px
+}
+
+.setting {
+    position: relative;
+    margin: 0 0 25px
+}
+
+.setting .forget {
+    position: absolute;
+    right: 0
+}
+
+.btn-danger {
+    background-color: #c81623;
+    padding: 6px;
+    border-radius: 0;
+    font-size: 16px;
+    font-family: Î¢ÈíÑÅºÚ;
+    word-spacing: 4px
+}
+
+.otherlogin {
+    position: relative;
+    margin-top: 30px
+}
+
+.otherlogin .register {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 15px
+}
+
+.types ul li {
+    list-style-type: none;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 40px;
+    height: 55px
+}
+
+.copyright ul li {
+    list-style-type: none;
+    display: inline-block;
+    display: inline;
+    zoom: 1;
+    border-right: 1px solid #e4e4e4;
+    padding: 0 20px;
+    margin: 15px 0
+}
+
+.copyright ul li:last-child {
+    border-right: 0
 }
