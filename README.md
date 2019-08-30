@@ -1,2 +1,2 @@
-# 01_luckyhome
-我的第一个项目—luckyhome
+luckyhome家居产品展示网站
+
