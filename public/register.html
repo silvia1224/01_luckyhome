@@ -26,13 +26,15 @@
                 <div class="control-group mb-4">
                     <label class="control-label text-dark mx-4 py-2">用户名:</label>
                     <div class="controls">
-                        <input type="text" placeholder="请输入您的用户名" class="input-xfat input-xlarge px-2" />
+                        <input type="text" name="username" placeholder="请输入您的用户名" class="input-xfat input-xlarge px-2" />
+                        <div class="vali_info">10个字以内的字母、数字或下划线的组合</div>
                     </div>
                 </div>
                 <div class="control-group mb-4">
                     <label class="control-label text-dark mr-3 py-2">登录密码：</label>
                     <div class="controls">
-                        <input type="password" placeholder="设置登陆密码" class="input-xfat input-xlarge px-2" />
+                        <input type="password" name="pwd" placeholder="设置登陆密码" class="input-xfat input-xlarge px-2" />
+                        <div class="vali_info">6位数字</div>
                     </div>
                 </div>
                 <div class="control-group mb-4">
@@ -72,5 +74,66 @@
         </div>
     </div>
 </div>
+<script>
+    //1.查找触发事件的元素
+    var form=document.forms[0];
+    var txtName=form.username;
+    var txtPwd=form.pwd;
+    //2.绑定事件处理函数
+    txtName.onfocus=
+            txtPwd.onfocus=function(){
+                //3.查找要修改的元素
+              var div=this.nextElementSibling;
+                div.className="";
+            }
+    //让姓名文本框自动获得焦点————必须放在onfocus后
+    txtName.focus();
+
+    /*文本框失去焦点，验证当前文本框的内容，修改提示信息的样式*/
+    //为姓名文本框绑定失去焦点事件
+    txtName.onblur=function(){
+        //定义正则表达式
+        var reg=/^\w{1,10}$/;
+        //this->txtName
+        //调用公共的验证方法vali
+        vali.call( this ,reg);
+    }
+    function vali(/*|*/reg){
+        //查找当前文本框旁边的div
+        var div=this.nextElementSibling;
+        //如果正则验证文本框的内容通过
+        if(reg.test(this.value)==true){
+            //就修改div的className为vali_success
+            div.className="vali_success";
+            return true;
+        }else{//否则
+            //就修改div的className为vali_fail
+            div.className="vali_fail";
+            return false;
+        }
+    }
+
+    txtPwd.onblur=function(){
+        //定义正则表达式
+        var reg=/^\d{6}$/;
+        //this->txtPwd
+        //调用公共的验证方法vali
+        vali.call( this ,reg);
+    }
+    //找到整个表单中倒数第二个表单元素——提交按钮，为按钮绑定单击事件
+    var btn=form.elements[form.length-2];
+    //form.length<==>form.elements.length
+    btn.onclick=function(){
+        //先验证性名文本框；
+        var rName=vali.call(txtName,/^\w{1,10}$/);
+        //再验证密码框；
+        var rPwd=vali.call(txtPwd,/^\d{6}$/);
+        //如果所有表单都验证通过，才能提交
+        if(rName==true&&rPwd==true){
+            console.log("发送ajax请求，提交数据到服务器。。。")
+        }
+    }
+
+</script>
 </body>
 </html>

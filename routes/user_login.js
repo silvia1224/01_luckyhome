@@ -2,7 +2,7 @@ const express=require("express");
 var pool=require("../pool.js");
 let router=express.Router();
 
-//get请求登录接口，实际应用post
+//get请求登录接口
 router.get("/user_login",(req,res)=>{
     //获取请求中的数据
     var $uname=req.query.uname;
